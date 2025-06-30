@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+</head>
+
+<body>
+    <input type="text" name="num" id="num" placeholder="guess the number">
+    <button id="btn">Submit</button>
+    <script>
+        let count = 0;
+        let randomNumber = Math.floor(Math.random() * 101);
+         function getvalue() {
+      return new Promise((resolve) => {
+        document.getElementById("btn").addEventListener("click", function handler() {
+          const value = parseInt( document.getElementById("num").value);
+          resolve(value); // Resolve the promise with the input value
+          // Optional: Remove the event listener after first use to avoid multiple triggers
+          
+        });
+      });
+    }
+
+    (async function main() {
+        let unum;
+        do{
+            unum = await getvalue();
+            count++;
+        if (unum<randomNumber) {
+            alert("guess higher");
+            
+        } 
+        else if(unum>randomNumber){
+            alert("guess lower");
+           
+        }
+        else{
+            alert(`correct the number of guess are ${count}`);
+            
+        }
+      }while(unum!==randomNumber)
+
+    })();
+
+
+
+
+
+    </script>
+</body>
+
+</html>

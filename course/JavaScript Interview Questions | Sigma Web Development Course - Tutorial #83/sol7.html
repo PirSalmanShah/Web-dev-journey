@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 7 local storage</title>
+</head>
+<body>
+    <input type="text" name="note" id="note" placeholder="enter your notes">
+    <button id="btn">Submit</button>
+    <script>
+     function setlocaldata(){
+        let note = document.getElementById("btn").addEventListener("click",()=>{
+            return document.getElementById("note").value;
+        })
+        if(!localStorage.getItem("notes")){
+            localStorage.setItem("notes",note);
+
+        }
+        else {
+            let a = localStorage.getItem("notes")
+            document.write(notes)
+        }
+        setlocaldata()
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker terminal</title>
+    <style>
+        *{
+            background-color: green;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds 
+    
+    Initializing Hacking",
+    Reading your Files",
+    Password files Detected",
+    Sending all passwords and personal files to server",
+    Cleaning up",
+
+    The three dots must blink so that it looks like a real terminal
+    -->
+
+    <script>
+        let arr =["Initializing Hacking","Reading your Files","Password files Detected","Sending all passwords and personal files to server","Cleaning up"]
+        
+        async function delay(ms) {
+            return new Promise((resolve)=>{
+                setTimeout(resolve, ms)
+            })
+            
+        }
+
+            
+        async function hacker() {
+            let t=setInterval(() => {
+                let last = document.body.lastElementChild
+                if(last.innerText.endsWith("...")){
+                    last.innerText = last.innerText.slice(0,last.innerText.length-3)
+                }
+                else{
+                    last.innerText = last.innerText + "."
+                }
+            }, 100);
+          for (const element of arr) {
+            let randomDelay = Math.floor(Math.random() * 7 + 1) * 1000;
+            let text = document.createElement("div")
+            text.innerText= element
+            await delay(randomDelay)
+            document.body.append(text)
+            
+          }  
+          await delay(3000)
+          clearInterval(t)
+
+        }
+        hacker()
+
+
+
+    </script>
+</body>
+</html>

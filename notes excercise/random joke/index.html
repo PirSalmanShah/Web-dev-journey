@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random jokes using api</title>
+</head>
+<body>
+    <script>
+        async function  getjoke() {
+            let response = await fetch("https://icanhazdadjoke.com/",{
+          headers: {
+            Accept: "application/json"
+          }
+        });
+            let x = await response.json();
+            return x.joke;
+        }
+        
+        async function  main() {
+            let x = await getjoke();
+            let div =document.createElement("div");
+            div.textContent = x;
+            document.body.appendChild(div)
+            
+            
+        }
+        main();
+        
+    </script>
+</body>
+</html>

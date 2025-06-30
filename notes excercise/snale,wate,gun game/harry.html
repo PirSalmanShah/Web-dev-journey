@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S W G game</title>
+</head>
+
+<body>
+    <input type="text" name="hand" id="hands" placeholder="Enter S , W or G">
+    <button id="btn">Submit</button>
+    <script>
+        let arr = ["S","W","G"];
+        let randomHand = Math.floor(Math.random() * 3);
+
+        async function  getHand() {
+            return new Promise((resolve) => {
+                let hand = document.getElementById("btn").addEventListener("click",()=>{
+                    let opts= document.getElementById("hands").value;
+                    opts.toUpperCase();
+                    resolve(opts) 
+                })
+            })
+        }
+        
+        (async function  main() {
+            let hand = await getHand();
+            let randhand = arr[randomHand];
+            let div = document.createElement("div")
+            if (hand == randhand) {
+                div.innerHTML="<b> this is tie</b>"
+                document.body.appendChild(div)
+            } 
+            else if((hand =="S" &&  randhand =="W")||(hand =="W" && randhand =="G")||(hand =="G" &&  randhand =="S")){
+                div.innerHTML=`<b>you win you choose ${hand} and comp choose ${randhand} </b>`
+                document.body.appendChild(div);
+                document.body.style.backgroundColor = "green";
+            }
+            else{
+                div.innerHTML=`<b> you lost ${hand} and comp choose ${randhand} </b>`
+                document.body.appendChild(div);
+                document.body.style.backgroundColor = "red";
+            }
+           
+            
+        
+            
+            
+
+        })()
+
+    </script>
+</body>
+
+</html>

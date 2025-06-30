@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12 DOM color</title>
+    <style>
+        .box{
+            height: 25px;
+            width: 25px;
+            padding: 25px;
+            margin: 25px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+
+    <script>
+
+        let colors=["red","blue","green","pink","orange"]
+        let boxes = document.getElementsByClassName("box")
+        
+        for (const element of boxes) {
+            let randomNumber = Math.floor(Math.random() * 6);
+          element.style.color = colors[randomNumber]  
+          
+        }
+        for (const element of boxes) {
+            const randomNumber = Math.floor(Math.random() * 6);
+          element.style.backgroundColor = colors[randomNumber]   
+          
+        }
+        
+        
+    </script>
+</body>
+</html>

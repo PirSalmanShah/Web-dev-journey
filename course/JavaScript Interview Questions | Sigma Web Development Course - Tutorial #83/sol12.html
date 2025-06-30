@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 12. The Token Manager:
+//     You are developing a user authentication system, and you need to manage user authentication tokens. Implement a function named setAuthToken that takes an authentication token and sets it in localStorage with an expiration time.
+
+let time =new Date()
+let currentTime = time.getTime()
+// 60 sec * 1000 millisec =60000millisec one min
+let expiration = currentTime+60*1000
+// console.log(currentTime);
+// console.log(expiration);
+let token ="abcxys1234"
+function  setAuthToken(token,expiration) {
+    let currentT= Date.now();
+    if(expiration>=currentT){
+        localStorage.setItem("tokens",token)
+        localStorage.setItem("expirations",expiration)
+        console.log('Token saved with expiration.');
+        
+    }
+    else {
+        console.log("Token not saved. Expiration time is in the past.");
+    }
+    
+}
+
+setAuthToken(token,1750886267707)
+
+// let currentTime = Date.now();             // Also gives current time in ms
+// let expiration = currentTime + 60 * 1000;
+
+    </script>
+</body>
+</html>
