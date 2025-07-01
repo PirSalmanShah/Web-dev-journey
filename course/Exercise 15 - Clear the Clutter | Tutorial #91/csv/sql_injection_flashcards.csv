@@ -1,0 +1,23 @@
+﻿What is SQL Injection (SQLi)?,A web application attack where a hacker inserts malicious SQL commands into input fields to gain unauthorized access or control over the database.
+What are the main purposes of SQL Injection?,"Bypass login, access/modify/delete data, drop tables, and execute admin operations."
+How does SQL Injection work?,It exploits the lack of input validation by injecting SQL commands into query strings.
+Why is SQL Injection similar to buffer overflow?,Both involve injecting input that alters the intended execution logic.
+What is input sanitization?,Modifying or processing input to ensure it is safe before use in a query.
+What is blacklisting in input sanitization?,"Removing known dangerous characters like ', ;, -- from input."
+What is escaping in input sanitization?,"Replacing harmful characters with safe ones, e.g., ' to ', ; to \;, etc."
+What is whitelisting in input validation?,"Accepting only inputs that meet safe, predefined criteria."
+What is a prepared statement?,"A method to separate code from data, treating user input by type to prevent SQLi."
+How does limiting user privileges help database security?,"Reduces what commands and tables a user can access, limiting damage if hacked."
+Why encrypt sensitive data in databases?,"To protect data like passwords, making it useless if stolen."
+What is SQLMap?,An open-source tool for detecting and exploiting SQL injection vulnerabilities.
+What does SQLMap automate?,"Detection, exploitation, and database management in penetration testing."
+What is Boolean-Based Blind Injection?,A technique using true/false queries to infer database info via HTTP response differences.
+What is Time-Based Blind Injection?,"Uses SQL commands like SLEEP to delay response, inferring data without visible output."
+What is Error-Based Injection?,"Forces database errors that leak data, effective if errors are visible to users."
+What is UNION Query-Based Injection?,Uses the UNION operator to combine and display query results directly.
+What are Stacked Queries?,"Executes multiple queries in one call (e.g., with a semicolon), allowing deeper exploits."
+What DBMSs does SQLMap support?,"MySQL, Oracle, PostgreSQL, SQL Server, SQLite, and more."
+What input methods does SQLMap accept?,"URL, Burp Suite logs, Google dorks, GET/POST/Cookie/Header parameters."
+What fingerprinting features does SQLMap offer?,"Identifies DBMS type, version, OS, users, privileges, tables, and columns."
+What exploitation capabilities does SQLMap have?,"Runs OS commands, uploads/downloads files, and provides interactive shell access."
+

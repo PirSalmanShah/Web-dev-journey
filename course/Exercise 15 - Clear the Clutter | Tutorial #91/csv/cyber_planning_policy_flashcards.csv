@@ -1,0 +1,29 @@
+Front,Back
+What is the purpose of cyber planning and policy?,"To manage cybersecurity risks, ensure incident preparedness, and align practices with business and legal goals."
+What is the first step in a cybersecurity plan?,"Asset, system, and network assessment to identify critical assets and vulnerabilities."
+What are risk mitigation strategies?,"Actions taken to minimize threats, such as firewalls, software updates, and securing servers."
+Why are cybersecurity policies important?,"They define acceptable use, password standards, data handling, and access management."
+What does legal and regulatory compliance ensure?,"That cybersecurity policies follow laws such as GDPR, HIPAA, or PECA 2016."
+What is an Incident Response Plan (IRP)?,"A plan for identifying, responding to, and recovering from cyber incidents."
+What are access control techniques?,"RBAC, MFA, and least privilege principles to prevent unauthorized access."
+Why is cybersecurity awareness training essential?,It reduces human error by educating employees about cyber threats.
+What is the role of continuous monitoring?,To detect unusual activities using IDS and SIEM tools.
+What is encryption used for?,To protect data in transit and at rest using protocols like SSL/TLS and AES.
+Why manage third-party risks?,To ensure vendors comply with security standards and avoid supply chain vulnerabilities.
+What is the purpose of cybersecurity audits and penetration testing?,To identify and fix vulnerabilities before attackers exploit them.
+Why is data backup important?,To secure critical data against loss or ransomware by storing it safely and regularly testing.
+What is contingency planning?,Preparing for continuity during and after security incidents.
+"What is the difference between IRP, DRP, and BCP?","IRP handles incidents, DRP recovers IT infrastructure, BCP ensures business continuity."
+What is a Hot Site?,A fully equipped backup facility that is a ready-to-use duplicate of the original site.
+What is a Warm Site?,"A backup site with some infrastructure and servers, but not fully operational."
+What is a Cold Site?,An empty facility with basic utilities but no computing equipment.
+What is PECA 2016?,A Pakistani law that addresses cybercrime and establishes investigation and enforcement mechanisms.
+What types of cyber offenses are penalized under PECA?,"Unauthorized access, data theft, hacking, cyber stalking, identity theft, etc."
+What is the role of NR3C under PECA?,To investigate cybercrimes and conduct enforcement under the FIA.
+How does PECA protect critical infrastructure?,"By identifying critical systems, assessing risks, and applying security measures."
+What is cyber terrorism according to PECA?,Using digital means to create fear or disrupt critical infrastructure with terrorist intent.
+What are the penalties for cyber terrorism under PECA?,Up to 14 years imprisonment and/or Rs. 5 million fine.
+How does PECA handle data protection?,"By criminalizing unauthorized processing, sharing, or disclosure of personal data."
+What is spoofing and its punishment under PECA?,"Sending deceptive content with fake sources; punishable by up to 3 years imprisonment and Rs. 500,000 fine."
+What do cybercrime statistics in Pakistan indicate?,"A rise in reported cases like harassment and fraud, showing growing awareness and enforcement."
+What elements must an effective cybersecurity framework combine?,"Technical controls, human awareness, legal compliance, and incident preparedness."

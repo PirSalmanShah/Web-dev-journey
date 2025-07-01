@@ -1,0 +1,11 @@
+Front,Back
+What is Heartbleed?,"A major security vulnerability in the OpenSSL library that allowed attackers to read memory from servers, potentially exposing sensitive data."
+When was Heartbleed publicly disclosed?,"April 7, 2014."
+Which versions of OpenSSL were affected by Heartbleed?,Versions 1.0.1 through 1.0.1f.
+Was the TLS protocol itself flawed in the Heartbleed vulnerability?,"No, the flaw was in the implementation of TLS in OpenSSL, not the protocol itself."
+What mechanism in TLS is related to Heartbleed?,"The Heartbeat mechanism, which tests if a secure communication link is still active."
+How did the Heartbleed bug work?,"OpenSSL did not validate the payload length in Heartbeat requests, allowing attackers to read extra memory."
+What kind of malformed request was used to exploit Heartbleed?,"A small payload with a large length field, causing the server to return extra data from memory."
+Could attackers control what memory was returned via Heartbleed?,"No, they could control the amount of memory but not the specific memory content."
+What types of data could be leaked due to Heartbleed?,"Private keys, session cookies, user credentials, and other sensitive information."
+What is the major consequence of Heartbleed?,It undermined internet confidentiality by exposing unencrypted memory contents from secure servers.

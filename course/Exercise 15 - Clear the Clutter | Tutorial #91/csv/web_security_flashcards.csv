@@ -1,0 +1,135 @@
+﻿What is an SQL Injection Attack?,An attack where malicious SQL queries are injected into a web application's database input fields to manipulate or access data.
+How can SQL Injection be prevented?,By using prepared statements and parameterized queries to sanitize user input.
+What is Cross-Site Scripting (XSS)?,"A vulnerability where malicious scripts are injected into trusted websites, executed in users’ browsers."
+What is an example of Stored XSS?,An attacker posts a comment like <script>alert('Hacked!');</script> which executes for all users if not sanitized.
+How do you prevent XSS attacks?,"By escaping input, sanitizing user input, and using Content Security Policy (CSP)."
+What is Cross-Site Request Forgery (CSRF)?,A type of attack where a user is tricked into performing unwanted actions on a site where they are authenticated.
+How can CSRF be prevented?,"By using CSRF tokens, setting SameSite cookie attributes, and verifying referrers."
+What is phishing in the context of web security?,"A method where attackers impersonate trusted entities to steal sensitive information, often via fake emails or websites."
+What is ransomware?,"Malware that encrypts user files and demands payment for decryption, such as the WannaCry attack."
+What is the ILOVEYOU worm an example of?,A virus that spread via email and deleted files upon being opened.
+How can spyware compromise user security?,It secretly collects data such as passwords through methods like keyloggers.
+What is a Distributed Denial of Service (DDoS) attack?,"An attack that floods a server with traffic, making services unavailable."
+What is cookie flow in web security?,"The lifecycle of how cookies are created, stored, and transmitted between a browser and server to maintain sessions."
+What are common cookie-based security risks?,Session hijacking and CSRF attacks.
+How do you secure cookies?,"By using Secure, HttpOnly, and SameSite attributes, and enforcing session expiration."
+Why are GET requests risky for modifying data?,"Because GET requests are cached, stored in history, and visible in URLs, making them insecure for sensitive actions."
+What is an example of risky GET usage?,http://bank.com/transfer?amt=1000&to=attacker can be exploited if clicked while logged in.
+How do attackers trick users into sending CSRF requests?,Through phishing emails or fake buttons on websites that trigger malicious actions.
+How does the SameSite cookie attribute help with CSRF prevention?,"It restricts cookies from being sent with cross-origin requests, reducing CSRF risk."
+What is the Same-Origin Policy (SOP)?,A browser security feature that restricts how documents and scripts from different origins interact.
+What are the three parts of the Same-Origin Policy?,"Domain, protocol (http/https), and port must match."
+How can SOP be bypassed safely?,Using mechanisms like CORS or legacy methods like JSONP.
+What is Cross-Origin Resource Sharing (CORS)?,"A way for servers to allow specific domains to access resources, overcoming SOP limitations."
+What is JavaScript’s role in web security risks?,"JavaScript can manipulate the DOM, handle events, and make asynchronous requests, posing risks if misused."
+What security measures limit JavaScript exploitation?,"Restricted domain access, cookie protection, and prevention of keylogging on other domains."
+How does CORS work?,The server sends headers like Access-Control-Allow-Origin to permit cross-domain access.
+How can websites safely use iframes for cross-domain content?,Through window.postMessage() for secure communication between frames.
+What is JavaScript Lacing?,"Injecting scripts into web content, often related to XSS attacks."
+What was the Samy XSS Worm?,"A stored XSS worm that spread on MySpace in 2005, affecting over a million users."
+What is the best practice for input validation?,Whitelisting – only allowing predefined valid inputs and validating all external data.
+What is Heartbleed?,"A major security vulnerability in the OpenSSL library that allowed attackers to read memory from servers, potentially exposing sensitive data."
+When was Heartbleed publicly disclosed?,"April 7, 2014."
+Which versions of OpenSSL were affected by Heartbleed?,Versions 1.0.1 through 1.0.1f.
+Was the TLS protocol itself flawed in the Heartbleed vulnerability?,"No, the flaw was in the implementation of TLS in OpenSSL, not the protocol itself."
+What mechanism in TLS is related to Heartbleed?,"The Heartbeat mechanism, which tests if a secure communication link is still active."
+How did the Heartbleed bug work?,"OpenSSL did not validate the payload length in Heartbeat requests, allowing attackers to read extra memory."
+What kind of malformed request was used to exploit Heartbleed?,"A small payload with a large length field, causing the server to return extra data from memory."
+Could attackers control what memory was returned via Heartbleed?,"No, they could control the amount of memory but not the specific memory content."
+What types of data could be leaked due to Heartbleed?,"Private keys, session cookies, user credentials, and other sensitive information."
+What is the major consequence of Heartbleed?,It undermined internet confidentiality by exposing unencrypted memory contents from secure servers.
+What is SQL Injection (SQLi)?,A web application attack where a hacker inserts malicious SQL commands into input fields to gain unauthorized access or control over the database.
+What are the main purposes of SQL Injection?,"Bypass login, access/modify/delete data, drop tables, and execute admin operations."
+How does SQL Injection work?,It exploits the lack of input validation by injecting SQL commands into query strings.
+Why is SQL Injection similar to buffer overflow?,Both involve injecting input that alters the intended execution logic.
+What is input sanitization?,Modifying or processing input to ensure it is safe before use in a query.
+What is blacklisting in input sanitization?,"Removing known dangerous characters like ', ;, -- from input."
+What is escaping in input sanitization?,"Replacing harmful characters with safe ones, e.g., ' to ', ; to \;, etc."
+What is whitelisting in input validation?,"Accepting only inputs that meet safe, predefined criteria."
+What is a prepared statement?,"A method to separate code from data, treating user input by type to prevent SQLi."
+How does limiting user privileges help database security?,"Reduces what commands and tables a user can access, limiting damage if hacked."
+Why encrypt sensitive data in databases?,"To protect data like passwords, making it useless if stolen."
+What is SQLMap?,An open-source tool for detecting and exploiting SQL injection vulnerabilities.
+What does SQLMap automate?,"Detection, exploitation, and database management in penetration testing."
+What is Boolean-Based Blind Injection?,A technique using true/false queries to infer database info via HTTP response differences.
+What is Time-Based Blind Injection?,"Uses SQL commands like SLEEP to delay response, inferring data without visible output."
+What is Error-Based Injection?,"Forces database errors that leak data, effective if errors are visible to users."
+What is UNION Query-Based Injection?,Uses the UNION operator to combine and display query results directly.
+What are Stacked Queries?,"Executes multiple queries in one call (e.g., with a semicolon), allowing deeper exploits."
+What DBMSs does SQLMap support?,"MySQL, Oracle, PostgreSQL, SQL Server, SQLite, and more."
+What input methods does SQLMap accept?,"URL, Burp Suite logs, Google dorks, GET/POST/Cookie/Header parameters."
+What fingerprinting features does SQLMap offer?,"Identifies DBMS type, version, OS, users, privileges, tables, and columns."
+What exploitation capabilities does SQLMap have?,"Runs OS commands, uploads/downloads files, and provides interactive shell access."
+What is the purpose of cyber planning and policy?,"To manage cybersecurity risks, ensure incident preparedness, and align practices with business and legal goals."
+What is the first step in a cybersecurity plan?,"Asset, system, and network assessment to identify critical assets and vulnerabilities."
+What are risk mitigation strategies?,"Actions taken to minimize threats, such as firewalls, software updates, and securing servers."
+Why are cybersecurity policies important?,"They define acceptable use, password standards, data handling, and access management."
+What does legal and regulatory compliance ensure?,"That cybersecurity policies follow laws such as GDPR, HIPAA, or PECA 2016."
+What is an Incident Response Plan (IRP)?,"A plan for identifying, responding to, and recovering from cyber incidents."
+What are access control techniques?,"RBAC, MFA, and least privilege principles to prevent unauthorized access."
+Why is cybersecurity awareness training essential?,It reduces human error by educating employees about cyber threats.
+What is the role of continuous monitoring?,To detect unusual activities using IDS and SIEM tools.
+What is encryption used for?,To protect data in transit and at rest using protocols like SSL/TLS and AES.
+Why manage third-party risks?,To ensure vendors comply with security standards and avoid supply chain vulnerabilities.
+What is the purpose of cybersecurity audits and penetration testing?,To identify and fix vulnerabilities before attackers exploit them.
+Why is data backup important?,To secure critical data against loss or ransomware by storing it safely and regularly testing.
+What is contingency planning?,Preparing for continuity during and after security incidents.
+"What is the difference between IRP, DRP, and BCP?","IRP handles incidents, DRP recovers IT infrastructure, BCP ensures business continuity."
+What is a Hot Site?,A fully equipped backup facility that is a ready-to-use duplicate of the original site.
+What is a Warm Site?,"A backup site with some infrastructure and servers, but not fully operational."
+What is a Cold Site?,An empty facility with basic utilities but no computing equipment.
+What is PECA 2016?,A Pakistani law that addresses cybercrime and establishes investigation and enforcement mechanisms.
+What types of cyber offenses are penalized under PECA?,"Unauthorized access, data theft, hacking, cyber stalking, identity theft, etc."
+What is the role of NR3C under PECA?,To investigate cybercrimes and conduct enforcement under the FIA.
+How does PECA protect critical infrastructure?,"By identifying critical systems, assessing risks, and applying security measures."
+What is cyber terrorism according to PECA?,Using digital means to create fear or disrupt critical infrastructure with terrorist intent.
+What are the penalties for cyber terrorism under PECA?,Up to 14 years imprisonment and/or Rs. 5 million fine.
+How does PECA handle data protection?,"By criminalizing unauthorized processing, sharing, or disclosure of personal data."
+What is spoofing and its punishment under PECA?,"Sending deceptive content with fake sources; punishable by up to 3 years imprisonment and Rs. 500,000 fine."
+What do cybercrime statistics in Pakistan indicate?,"A rise in reported cases like harassment and fraud, showing growing awareness and enforcement."
+What elements must an effective cybersecurity framework combine?,"Technical controls, human awareness, legal compliance, and incident preparedness."
+What is the function of the Application layer in the OSI Model?,"User interaction and network services such as HTTP, FTP, SMTP."
+What does the Presentation layer do in the OSI Model?,"It handles data formatting, encryption, and compression."
+What is the role of the Session layer in the OSI Model?,Manages communication sessions between devices.
+What is the main function of the Transport layer in the OSI Model?,Ensures reliable or fast data delivery using protocols like TCP and UDP.
+What does the Network layer handle in the OSI Model?,IP addressing and routing using protocols like IP and ICMP.
+What does the Data Link layer manage in the OSI Model?,MAC addresses and error detection using Ethernet and switches.
+What is the role of the Physical layer in the OSI Model?,Transmits raw data through cables and network interfaces.
+How does the TCP/IP model differ from the OSI model?,TCP/IP has 4 layers and combines the top three OSI layers into one Application layer.
+What is ARP Spoofing / Cache Poisoning Attack?,"Attackers send fake ARP replies to link their MAC to a victim’s IP, redirecting traffic to themselves."
+How can ARP Spoofing be defended against?,"Using Static ARP Entries, Dynamic ARP Inspection, detection tools, and encrypting network traffic."
+What is a Denial of Service (DoS) Attack?,Flooding a target with excessive requests to make it unavailable to legitimate users.
+What is a SYN Flood Attack?,"An attacker sends many SYN requests without completing the handshake, overloading server resources."
+What is an ICMP Flood Attack?,"Overwhelming a system with ping requests, consuming resources and causing DoS."
+What is an HTTP Flood Attack?,Sending numerous HTTP requests to overload a website using bots.
+What is a Man-in-the-Middle (MITM) Attack?,"An attacker intercepts communication between two parties, possibly modifying data."
+1. Define malware.,"Malware is code running on a system without admin awareness, compromising confidentiality, integrity, or availability."
+2. List common formats malware can take.,"Executables, binary shell code, scripts, and firmware."
+3. What are two key traits of malware?,Harmfulness and the ability to act without user consent or knowledge.
+"4. According to NIST, what is malware?",Software inserted covertly to compromise data or disrupt system operations.
+5. What are the three classifications of malware?,"By type, by malicious behavior, and by execution privileges."
+6. Describe a computer virus.,Injects its code into other files to replicate and spread across systems.
+7. What is a Remote Access Trojan (RAT)?,A type of malware disguised as benign software to control a system remotely.
+8. What is spyware's function?,Tracks user activity and sends data to the attacker without consent.
+9. Define a computer worm.,"Self-replicating malware that spreads via networks, often clogging bandwidth."
+10. What is adware?,"Displays advertisements to users, often hidden in other software, considered grayware."
+11. How does scareware operate?,"Pretends to be antivirus software, tricking users into buying fake protection."
+12. What is a bot in malware context?,"A device infected to follow attacker commands, often part of a botnet."
+13. What are botnets used for?,"Distributed Denial-of-Service (DDoS) attacks, spam, and fraud."
+14. Explain ransomware.,"Encrypts files and demands payment, usually in cryptocurrency, for decryption."
+15. How does ransomware affect users?,"Prevents file access, causing potential data loss or ransom payment."
+16. What is a cryptominer?,Uses infected computers’ resources to mine cryptocurrencies for attackers.
+17. List examples of malware behaviors.,"Information theft, denial of service, creating vulnerabilities, deceiving users."
+18. What is keylogging?,Recording user keystrokes to steal sensitive information like passwords.
+19. Define spying in malware.,Collecting host/user data for financial gain or exploitation.
+20. What is a sniffing attack?,Intercepting network traffic to extract sensitive data.
+21. How can malware create vulnerabilities?,"Disabling security software, opening backdoors, downgrading firmware."
+22. Describe a DDoS attack.,Overloads a service with fake requests from multiple infected systems.
+23. What are access denial attacks?,Worms or ransomware prevent users from accessing systems or files.
+24. How can malware damage hardware?,"Overwriting firmware like BIOS, making the device unusable."
+25. What does executing C&C commands mean?,Malware receives and executes commands from an external server.
+26. How do attackers deceive users?,"Via phishing, fake software messages, and social engineering."
+27. What is the effect of annoying malware?,"Displays ads or changes settings, disrupting user experience."
+28. How does cryptomining compromise systems?,"Consumes processing power and electricity, reducing performance."
+29. What is malicious spreading?,"Rapid malware replication across systems, like the Morris worm."
+30. Can spreading be non-malicious?,"Yes, like Linux.Wifatch, which removes malware and improves security."
