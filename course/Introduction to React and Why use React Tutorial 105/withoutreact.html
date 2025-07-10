@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to react</title>
+</head>
+<body>
+    <div class="container">0</div>
+    <button class="btn">Click me</button>
+
+    <script>
+        let count = 0
+        document.querySelector(".btn").addEventListener("click",()=>{
+            
+            count++
+            let div = document.querySelector(".container")
+            div.innerText=`${count}`
+
+        })
+    </script>
+</body>
+</html>
